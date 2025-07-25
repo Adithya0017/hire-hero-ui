@@ -97,17 +97,19 @@ const HeroSection = () => {
           </div>
 
           {/* Suggested Keywords */}
-          <div className="flex flex-wrap justify-center gap-3">
-            <span className="text-blue-100 font-medium">Popular searches:</span>
-            {suggestedKeywords.map((keyword) => (
-              <button
-                key={keyword}
-                onClick={() => handleKeywordClick(keyword)}
-                className="px-4 py-2 bg-white/20 text-white rounded-full hover:bg-white/30 transition-colors backdrop-blur-sm border border-white/20"
-              >
-                {keyword}
-              </button>
-            ))}
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3">
+            <span className="text-blue-100 font-medium text-center">Popular searches:</span>
+            <div className="flex flex-wrap justify-center gap-2">
+              {suggestedKeywords.map((keyword) => (
+                <button
+                  key={keyword}
+                  onClick={() => handleKeywordClick(keyword)}
+                  className="px-4 py-2 bg-white/20 text-white rounded-full hover:bg-white/30 transition-colors backdrop-blur-sm border border-white/20"
+                >
+                  {keyword}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>

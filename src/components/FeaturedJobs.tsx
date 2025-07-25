@@ -1,5 +1,12 @@
 import JobCard from "./JobCard";
 import jobsData from "../data/jobs.json";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const FeaturedJobs = () => {
   return (
@@ -15,11 +22,26 @@ const FeaturedJobs = () => {
           </p>
         </div>
 
-        {/* Jobs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        {/* Jobs Grid - Desktop */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {jobsData.map((job) => (
             <JobCard key={job.id} job={job} />
           ))}
+        </div>
+
+        {/* Jobs Carousel - Mobile */}
+        <div className="md:hidden">
+          <Carousel className="w-full max-w-sm mx-auto">
+            <CarouselContent>
+              {jobsData.map((job) => (
+                <CarouselItem key={job.id}>
+                  <JobCard job={job} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
 
         {/* View All Jobs Button */}

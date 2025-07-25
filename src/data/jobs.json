@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Senior Frontend Developer",
+    "company": "Google",
+    "location": "Bangalore, India",
+    "type": "Full-Time",
+    "salary": "₹25-35 LPA",
+    "logo": "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=40&h=40&fit=crop&crop=center"
+  },
+  {
+    "id": 2,
+    "title": "UI/UX Designer",
+    "company": "Microsoft",
+    "location": "Hyderabad, India",
+    "type": "Full-Time",
+    "salary": "₹18-25 LPA",
+    "logo": "https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=40&h=40&fit=crop&crop=center"
+  },
+  {
+    "id": 3,
+    "title": "Product Manager",
+    "company": "Amazon",
+    "location": "Mumbai, India",
+    "type": "Full-Time",
+    "salary": "₹30-45 LPA",
+    "logo": "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=40&h=40&fit=crop&crop=center"
+  },
+  {
+    "id": 4,
+    "title": "Backend Developer",
+    "company": "Netflix",
+    "location": "Delhi, India",
+    "type": "Part-Time",
+    "salary": "₹20-28 LPA",
+    "logo": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=40&h=40&fit=crop&crop=center"
+  },
+  {
+    "id": 5,
+    "title": "Data Scientist",
+    "company": "Meta",
+    "location": "Pune, India",
+    "type": "Full-Time",
+    "salary": "₹22-32 LPA",
+    "logo": "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=40&h=40&fit=crop&crop=center"
+  },
+  {
+    "id": 6,
+    "title": "DevOps Engineer",
+    "company": "Apple",
+    "location": "Chennai, India",
+    "type": "Full-Time",
+    "salary": "₹24-35 LPA",
+    "logo": "https://images.unsplash.com/photo-1621768216002-5ac171876625?w=40&h=40&fit=crop&crop=center"
+  }
+]

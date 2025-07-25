@@ -10,7 +10,14 @@ const HeroSection = () => {
     company: "",
   });
 
-  const suggestedKeywords = ["Designer", "Developer", "Tester", "Manager", "Analyst", "Writer"];
+  const suggestedKeywords = [
+    "Designer",
+    "Developer",
+    "Tester",
+    "Manager",
+    "Analyst",
+    "Writer",
+  ];
 
   const handleSearch = () => {
     console.log("Searching for:", searchData);
@@ -18,7 +25,7 @@ const HeroSection = () => {
   };
 
   const handleKeywordClick = (keyword: string) => {
-    setSearchData(prev => ({ ...prev, jobTitle: keyword }));
+    setSearchData((prev) => ({ ...prev, jobTitle: keyword }));
   };
 
   return (
@@ -34,11 +41,12 @@ const HeroSection = () => {
             </span>
           </h1>
           <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
-            Discover thousands of job opportunities from top companies around the world
+            Discover thousands of job opportunities from top companies around
+            the world
           </p>
 
           {/* Search Bar */}
-          <div className="bg-white rounded-2xl p-2 sm:p-4 shadow-xl max-w-4xl mx-auto mb-8">
+          <div className="bg-white dark:bg-background rounded-2xl p-2 sm:p-4 shadow-xl max-w-4xl mx-auto mb-8">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-2">
               {/* Job Title Input */}
               <div className="relative">
@@ -48,9 +56,12 @@ const HeroSection = () => {
                   placeholder="Job title / keyword"
                   value={searchData.jobTitle}
                   onChange={(e) =>
-                    setSearchData(prev => ({ ...prev, jobTitle: e.target.value }))
+                    setSearchData((prev) => ({
+                      ...prev,
+                      jobTitle: e.target.value,
+                    }))
                   }
-                  className="pl-10 h-14 border-0 bg-muted/50 focus:bg-background transition-colors"
+                  className="pl-10 h-14 border-0 bg-muted/50 dark:bg-neutral-800 focus:bg-background transition-colors"
                 />
               </div>
 
@@ -62,9 +73,12 @@ const HeroSection = () => {
                   placeholder="Location"
                   value={searchData.location}
                   onChange={(e) =>
-                    setSearchData(prev => ({ ...prev, location: e.target.value }))
+                    setSearchData((prev) => ({
+                      ...prev,
+                      location: e.target.value,
+                    }))
                   }
-                  className="pl-10 h-14 border-0 bg-muted/50 focus:bg-background transition-colors"
+                  className="pl-10 h-14 border-0 bg-muted/50 dark:bg-neutral-800 focus:bg-background transition-colors"
                 />
               </div>
 
@@ -76,9 +90,12 @@ const HeroSection = () => {
                   placeholder="Company"
                   value={searchData.company}
                   onChange={(e) =>
-                    setSearchData(prev => ({ ...prev, company: e.target.value }))
+                    setSearchData((prev) => ({
+                      ...prev,
+                      company: e.target.value,
+                    }))
                   }
-                  className="pl-10 h-14 border-0 bg-muted/50 focus:bg-background transition-colors sm:pr-20"
+                  className="pl-10 h-14 border-0 bg-muted/50 dark:bg-neutral-800 focus:bg-background transition-colors sm:pr-20"
                 />
                 {/* Search Button - Overlapped on larger screens */}
                 <Button
@@ -98,7 +115,9 @@ const HeroSection = () => {
 
           {/* Suggested Keywords */}
           <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3">
-            <span className="text-blue-100 font-medium text-center">Popular searches:</span>
+            <span className="text-blue-100 font-medium text-center">
+              Popular searches:
+            </span>
             <div className="flex flex-wrap justify-center gap-2">
               {suggestedKeywords.map((keyword) => (
                 <button
